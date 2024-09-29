@@ -1,0 +1,28 @@
+{
+  "name": "cypressframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "cucumbertest": "npx cypress run --env tags='@smoke' --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress-plugin-api": "^2.6.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "cypress": "^12.2.0",
+    "typescript": "^4.9.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/step_definitions/**/*.{js,ts}",
+    "html":{
+      "enabled":true
+    }
+  }
+}
